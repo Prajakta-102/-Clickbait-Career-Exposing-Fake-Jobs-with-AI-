@@ -53,16 +53,14 @@ Built and evaluated the following models:
 ---
 
 ## 🧠 Model Comparison
-
-| Model                | Accuracy | Precision | Recall | F1 Score |
-|---------------------|----------|-----------|--------|----------|
-| Logistic Regression | 91%      | 89%       | 93%    | 91%      |
-| Random Forest       | 97%      | 95%       | 97%    | 96%      |
-| XGBoost             | 96%      | 94%       | 96%    | 95%      |
-| SVM (Linear)        | 90%      | 88%       | 91%    | 89%      |
-| **Naive Bayes**     | 96%      | 96%       | 20%    | 33%      |
-
-> ⚠️ Naive Bayes gave high accuracy but **failed to detect most fake jobs (low recall = 20%)**, making it unreliable in fraud detection.
+| Model               | Accuracy | Precision (Fake) | Recall (Fake) | F1-Score (Fake) | Remarks                                               |
+|---------------------|----------|------------------|---------------|-----------------|-------------------------------------------------------|
+| Logistic Regression | 96.5%    | 0.98             | 0.28          | 0.44            | High precision, poor recall → misses many fake jobs   |
+| Random Forest       | 97.7%    | 0.97             | 0.55          | 0.70            | Good balance                                           |
+| RF + SMOTE          | 98.0%    | 0.94             | 0.63          | 0.75            | SMOTE improved recall significantly                   |
+| XGBoost + SMOTE     | 97.2%    | 0.72             | 0.69          | 0.71            | Balanced but lower precision                          |
+| SVM                 | 98.10%   | 0.97             | 0.62          | 0.76            | Best F1-score, top accuracy                           |
+| Naive Bayes         | 96.0%    | 0.96             | 0.20          | 0.33            | Very poor recall → fails to detect most fake jobs     |
 
 ---
 
