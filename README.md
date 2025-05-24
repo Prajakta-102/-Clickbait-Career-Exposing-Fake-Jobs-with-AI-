@@ -54,7 +54,7 @@ Built and evaluated the following models:
 
 ## 🧠 Model Comparison
 | Model               | Accuracy | Precision | Recall | F1-Score | Remarks                                               |
-| Model               | Accuracy |  (Fake)   | (Fake) |  (Fake)  | Remarks                                               |
+|                     |          |  (Fake)   | (Fake) |  (Fake)  |                                                       |
 |---------------------|----------|-----------|--------|----------|-------------------------------------------------------|
 | Logistic Regression | 96.5%    | 0.98      | 0.28   | 0.44     | High precision, poor recall → misses many fake jobs   |
 | Random Forest       | 97.7%    | 0.97      | 0.55   | 0.70     | Good balance                                          |
